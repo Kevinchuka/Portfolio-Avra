@@ -1,0 +1,70 @@
+
+import React from 'react';
+
+export const LocalDigitalization: React.FC = () => {
+  const features = [
+    "Visita presencial y relevamiento estratégico",
+    "Fotografía profesional de productos y servicios",
+    "Digitalización de catálogos y listas físicas",
+    "Carga estructurada en bases de datos seguras",
+    "Lanzamiento de ecosistema digital completo"
+  ];
+
+  return (
+    <div className="max-w-7xl mx-auto px-6">
+      <div className="flex flex-col lg:flex-row items-center gap-16">
+        <div className="flex-1">
+          <div className="inline-block px-3 py-1 rounded-md bg-orange-500 text-white text-[10px] font-black uppercase tracking-[0.2em] mb-6">
+            Diferencial Exclusivo
+          </div>
+          <h2 className="font-outfit text-4xl md:text-6xl font-bold mb-8 leading-tight">
+            Del mundo físico a la <span className="text-orange-500 underline decoration-white/20 underline-offset-8">vanguardia digital.</span>
+          </h2>
+          <p className="text-zinc-400 text-lg mb-10 leading-relaxed max-w-xl">
+            No solo creamos código. Visitamos su empresa, entendemos su operativa y digitalizamos cada átomo de su negocio para convertirlo en una marca digital moderna y competitiva.
+          </p>
+          
+          <ul className="space-y-4">
+            {features.map((item, idx) => (
+              <li key={idx} className="flex items-center gap-3 text-zinc-300 font-medium">
+                <div className="w-5 h-5 rounded-full bg-orange-500/20 border border-orange-500/40 flex items-center justify-center text-orange-500 text-[10px]">
+                  <i className="bi bi-check-lg"></i>
+                </div>
+                {item}
+              </li>
+            ))}
+          </ul>
+
+          <div className="mt-12">
+            <a href="#contacto" className="inline-flex items-center gap-2 text-white font-bold group">
+              Solicitar relevamiento presencial 
+              <span className="group-hover:translate-x-2 transition-transform text-orange-500">
+                <i className="bi bi-arrow-right"></i>
+              </span>
+            </a>
+          </div>
+        </div>
+
+        <div className="flex-1 relative">
+          <div className="aspect-square rounded-3xl overflow-hidden glass-card p-2 relative z-10">
+            <img 
+              src="https://picsum.photos/seed/tech1/800/800" 
+              alt="Digitalization process" 
+              className="w-full h-full object-cover rounded-2xl opacity-80"
+            />
+            {/* Overlay indicators */}
+            <div className="absolute top-10 left-10 glass-card p-4 rounded-xl border-orange-500/20 animate-pulse">
+              <div className="w-2 h-2 rounded-full bg-orange-500 mb-2"></div>
+              <p className="text-[10px] font-bold uppercase tracking-widest text-zinc-400">Escaneando Datos</p>
+            </div>
+            <div className="absolute bottom-10 right-10 glass-card p-4 rounded-xl border-white/20">
+               <p className="text-[10px] font-bold uppercase tracking-widest text-orange-500">Precisión 99.9%</p>
+            </div>
+          </div>
+          {/* Background glow */}
+          <div className="absolute -inset-4 bg-orange-500/10 blur-[80px] rounded-full z-0"></div>
+        </div>
+      </div>
+    </div>
+  );
+};

@@ -1,0 +1,7 @@
+{
+  "name": "Avra IT - Estudio Digital Premium",
+  "description": "Sitio web corporativo de Avra IT, agencia tecnológica especializada en desarrollo web premium y digitalización integral de negocios con estética cinematográfica y espacial.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}

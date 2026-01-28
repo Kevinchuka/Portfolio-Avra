@@ -1,0 +1,80 @@
+
+import React from 'react';
+
+export const Contact: React.FC = () => {
+  return (
+    <div className="max-w-7xl mx-auto px-6">
+      <div className="glass-card rounded-[3rem] overflow-hidden border-white/5">
+        <div className="bg-black/20 p-12 md:p-24 flex flex-col lg:flex-row gap-20">
+          <div className="flex-1">
+            <h2 className="font-outfit text-4xl md:text-6xl font-bold mb-8 leading-tight">¿Listo para el <br /> <span className="text-orange-500 italic">Next Level</span>?</h2>
+            <p className="text-zinc-500 text-lg mb-12 max-w-md leading-relaxed">
+              Transformamos la complejidad operativa en experiencias digitales fluidas. Cuéntenos su visión.
+            </p>
+            
+            <div className="space-y-8">
+              <a href="#" className="flex items-center gap-5 group">
+                <div className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-zinc-400 group-hover:text-orange-500 group-hover:border-orange-500/30 transition-all">
+                  <i className="bi bi-whatsapp"></i>
+                </div>
+                <div>
+                  <p className="text-[10px] font-black text-zinc-600 uppercase tracking-[0.2em]">WhatsApp Directo</p>
+                  <p className="text-lg text-zinc-300">Conectar ahora</p>
+                </div>
+              </a>
+              <div className="flex items-center gap-5 group">
+                <div className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-zinc-400 group-hover:text-orange-500 group-hover:border-orange-500/30 transition-all">
+                  <i className="bi bi-envelope"></i>
+                </div>
+                <div>
+                  <p className="text-[10px] font-black text-zinc-600 uppercase tracking-[0.2em]">Email</p>
+                  <p className="text-lg text-zinc-300">proyectos@avrait.com</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="flex-1 glass-card p-8 md:p-12 rounded-[2.5rem] border-white/5 bg-white/[0.01]">
+            <form className="space-y-8">
+              <div className="grid md:grid-cols-2 gap-8">
+                <div className="space-y-2">
+                  <label className="text-[9px] font-black text-zinc-500 uppercase tracking-widest ml-1">Empresa</label>
+                  <input 
+                    type="text" 
+                    className="w-full bg-transparent border-b border-white/10 py-3 text-white focus:border-orange-500 outline-none transition-all placeholder:text-zinc-800"
+                    placeholder="Nombre"
+                  />
+                </div>
+                <div className="space-y-2">
+                  <label className="text-[9px] font-black text-zinc-500 uppercase tracking-widest ml-1">Email</label>
+                  <input 
+                    type="email" 
+                    className="w-full bg-transparent border-b border-white/10 py-3 text-white focus:border-orange-500 outline-none transition-all placeholder:text-zinc-800"
+                    placeholder="Email corporativo"
+                  />
+                </div>
+              </div>
+              
+              <div className="space-y-2">
+                <label className="text-[9px] font-black text-zinc-500 uppercase tracking-widest ml-1">Proyecto</label>
+                <div className="relative">
+                  <select className="w-full bg-transparent border-b border-white/10 py-3 text-zinc-500 focus:border-orange-500 outline-none transition-all appearance-none">
+                    <option className="bg-zinc-950">Digitalización Integral</option>
+                    <option className="bg-zinc-950">Desarrollo SaaS</option>
+                    <option className="bg-zinc-950">E-commerce Premium</option>
+                  </select>
+                  <i className="bi bi-chevron-down absolute right-0 top-1/2 -translate-y-1/2 text-[10px] text-zinc-700 pointer-events-none"></i>
+                </div>
+              </div>
+
+              <button className="group relative w-full py-5 rounded-2xl overflow-hidden transition-all active:scale-[0.98]">
+                <div className="absolute inset-0 bg-gradient-to-r from-orange-600 to-orange-400 opacity-90 group-hover:opacity-100 transition-opacity"></div>
+                <span className="relative z-10 text-white font-black text-xs uppercase tracking-[0.3em]">Enviar Solicitud</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
