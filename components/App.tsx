@@ -1,14 +1,15 @@
+"use client";
 
-import React, { useState, useEffect } from 'react';
-import { Navbar } from './components/Navbar';
-import { Hero } from './components/Hero';
-import { Solutions } from './components/Solutions';
-import { LocalDigitalization } from './components/LocalDigitalization';
-import { CaseStudies } from './components/CaseStudies';
-import { Process } from './components/Process';
-import { About } from './components/About';
-import { Contact } from './components/Contact';
-import { Footer } from './components/Footer';
+import React, { useEffect, useState } from 'react';
+import { Navbar } from './Navbar';
+import { Hero } from './Hero';
+import { Solutions } from './Solutions';
+import { LocalDigitalization } from './LocalDigitalization';
+import { CaseStudies } from './CaseStudies';
+import { Process } from './Process';
+import { About } from './About';
+import { Contact } from './Contact';
+import { Footer } from './Footer';
 
 const App: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -28,7 +29,7 @@ const App: React.FC = () => {
         <section id="home">
           <Hero />
         </section>
-        
+
         <section id="soluciones" className="relative z-10 py-24 md:py-32">
           <Solutions />
         </section>
@@ -49,7 +50,10 @@ const App: React.FC = () => {
           <About />
         </section>
 
-        <section id="contacto" className="relative z-10 py-24 md:py-32 bg-gradient-to-b from-black to-zinc-900">
+        <section
+          id="contacto"
+          className="relative z-10 py-24 md:py-32 bg-gradient-to-b from-black to-zinc-900"
+        >
           <Contact />
         </section>
       </main>
