@@ -49,28 +49,28 @@ export const Process: React.FC = () => {
       title: 'Incepción',
       icon: 'bi-fingerprint',
       side: 'top',
-      desc: 'Análisis de ADN digital y detección de oportunidades tácticas.'
+      desc: 'Relevamiento inicial, objetivos y alcance del proyecto.'
     },
     {
       id: 'II',
       title: 'Arquitectura',
       icon: 'bi-box-seam',
       side: 'bottom',
-      desc: 'Diseño de sistemas escalables y blueprints de alta precisión.'
+      desc: 'Planificación del sitio, estructura y contenido principal.'
     },
     {
       id: 'III',
       title: 'Forja',
       icon: 'bi-terminal-fill',
       side: 'top',
-      desc: 'Ingeniería de software premium enfocada en el performance puro.'
+      desc: 'Desarrollo, integración y revisiones con el cliente.'
     },
     {
       id: 'IV',
       title: 'Evolución',
       icon: 'bi-infinity',
       side: 'bottom',
-      desc: 'Optimización algorítmica y escalado estratégico post-lanzamiento.'
+      desc: 'Lanzamiento, ajustes y soporte según necesidad.'
     }
   ];
 
@@ -85,9 +85,9 @@ export const Process: React.FC = () => {
 
       {/* Header Info - More compact */}
       <div className="relative z-20 mb-20 text-center">
-        <span className="text-orange-500 font-black text-[9px] uppercase tracking-[0.6em] mb-2 block">Premium Workflow</span>
+        <span className="text-orange-500 font-black text-[9px] uppercase tracking-[0.6em] mb-2 block">Nuestro proceso</span>
         <h2 className="font-outfit text-4xl md:text-5xl font-bold tracking-tight text-white">
-          Nuestra <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-700">Metodología de Forja</span>
+          Un flujo claro <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-700">de trabajo</span>
         </h2>
       </div>
 

@@ -7,9 +7,9 @@ export const Contact: React.FC = () => {
       <div className="glass-card rounded-[3rem] overflow-hidden border-white/5">
         <div className="bg-black/20 p-12 md:p-24 flex flex-col lg:flex-row gap-20">
           <div className="flex-1">
-            <h2 className="font-outfit text-4xl md:text-6xl font-bold mb-8 leading-tight">¿Listo para el <br /> <span className="text-orange-500 italic">Next Level</span>?</h2>
+            <h2 className="font-outfit text-4xl md:text-6xl font-bold mb-8 leading-tight">Hablemos de tu proyecto</h2>
             <p className="text-zinc-500 text-lg mb-12 max-w-md leading-relaxed">
-              Transformamos la complejidad operativa en experiencias digitales fluidas. Cuéntenos su visión.
+              Podemos coordinar por mensaje, llamada o email. Compartí tu idea y te respondemos con tiempos y próximos pasos.
             </p>
             
             <div className="space-y-8">
@@ -18,8 +18,8 @@ export const Contact: React.FC = () => {
                   <i className="bi bi-whatsapp"></i>
                 </div>
                 <div>
-                  <p className="text-[10px] font-black text-zinc-600 uppercase tracking-[0.2em]">WhatsApp Directo</p>
-                  <p className="text-lg text-zinc-300">Conectar ahora</p>
+                  <p className="text-[10px] font-black text-zinc-600 uppercase tracking-[0.2em]">WhatsApp</p>
+                  <p className="text-lg text-zinc-300">Escribir por WhatsApp</p>
                 </div>
               </a>
               <div className="flex items-center gap-5 group">
@@ -42,7 +42,7 @@ export const Contact: React.FC = () => {
                   <input 
                     type="text" 
                     className="w-full bg-transparent border-b border-white/10 py-3 text-white focus:border-orange-500 outline-none transition-all placeholder:text-zinc-800"
-                    placeholder="Nombre"
+                    placeholder="Empresa o nombre"
                   />
                 </div>
                 <div className="space-y-2">
@@ -50,7 +50,7 @@ export const Contact: React.FC = () => {
                   <input 
                     type="email" 
                     className="w-full bg-transparent border-b border-white/10 py-3 text-white focus:border-orange-500 outline-none transition-all placeholder:text-zinc-800"
-                    placeholder="Email corporativo"
+                    placeholder="Email de contacto"
                   />
                 </div>
               </div>
@@ -59,9 +59,10 @@ export const Contact: React.FC = () => {
                 <label className="text-[9px] font-black text-zinc-500 uppercase tracking-widest ml-1">Proyecto</label>
                 <div className="relative">
                   <select className="w-full bg-transparent border-b border-white/10 py-3 text-zinc-500 focus:border-orange-500 outline-none transition-all appearance-none">
-                    <option className="bg-zinc-950">Digitalización Integral</option>
-                    <option className="bg-zinc-950">Desarrollo SaaS</option>
-                    <option className="bg-zinc-950">E-commerce Premium</option>
+                    <option className="bg-zinc-950">Sitio institucional</option>
+                    <option className="bg-zinc-950">Landing o campaña</option>
+                    <option className="bg-zinc-950">Tienda online</option>
+                    <option className="bg-zinc-950">Sistema interno</option>
                   </select>
                   <i className="bi bi-chevron-down absolute right-0 top-1/2 -translate-y-1/2 text-[10px] text-zinc-700 pointer-events-none"></i>
                 </div>
@@ -69,7 +70,7 @@ export const Contact: React.FC = () => {
 
               <button className="group relative w-full py-5 rounded-2xl overflow-hidden transition-all active:scale-[0.98]">
                 <div className="absolute inset-0 bg-gradient-to-r from-orange-600 to-orange-400 opacity-90 group-hover:opacity-100 transition-opacity"></div>
-                <span className="relative z-10 text-white font-black text-xs uppercase tracking-[0.3em]">Enviar Solicitud</span>
+                <span className="relative z-10 text-white font-black text-xs uppercase tracking-[0.3em]">Enviar consulta</span>
               </button>
             </form>
           </div>

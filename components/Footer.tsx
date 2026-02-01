@@ -18,7 +18,7 @@ export const Footer: React.FC = () => {
               />
             </div>
             <p className="text-zinc-500 max-w-sm text-sm">
-              Potenciando negocios físicos a través de ingeniería digital premium y estrategias de digitalización de vanguardia.
+              Estudio de desarrollo web que acompaña negocios locales con soluciones claras y mantenibles.
             </p>
           </div>
 
@@ -43,7 +43,7 @@ export const Footer: React.FC = () => {
 
         <div className="flex flex-col md:flex-row justify-between items-center pt-10 border-t border-white/5 text-[10px] text-zinc-600 font-bold uppercase tracking-[0.2em]">
           <p>© 2024 AVRA IT - Todos los derechos reservados.</p>
-          <p>Hecho con precisión por el equipo Avra.</p>
+          <p>Hecho por el equipo Avra con foco en claridad y soporte.</p>
         </div>
       </div>
     </footer>

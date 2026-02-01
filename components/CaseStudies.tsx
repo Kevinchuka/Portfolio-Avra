@@ -7,19 +7,19 @@ export const CaseStudies: React.FC = () => {
       title: 'Aurora Logistics',
       category: 'SaaS / Optimización',
       image: 'https://picsum.photos/seed/aurora/800/600',
-      description: 'Reducción del 40% en tiempos de carga mediante digitalización completa de inventario.'
+      description: 'Panel interno para gestionar inventario, tiempos y reportes operativos.'
     },
     {
       title: 'Vanguard Realty',
       category: 'Real Estate / Web',
       image: 'https://picsum.photos/seed/vanguard/800/600',
-      description: 'Plataforma interactiva con visualización 360 y gestión de prospectos automatizada.'
+      description: 'Sitio informativo con catálogo de propiedades y formularios de contacto.'
     },
     {
       title: 'Nexum Studio',
       category: 'Branding / E-commerce',
       image: 'https://picsum.photos/seed/nexum/800/600',
-      description: 'Tienda premium para marca de diseño con experiencia de checkout en un solo paso.'
+      description: 'Tienda con catálogo ordenado, medios de pago y sección de novedades.'
     }
   ];
 
@@ -27,8 +27,8 @@ export const CaseStudies: React.FC = () => {
     <div className="max-w-7xl mx-auto px-6">
       <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
         <div>
-          <h2 className="text-orange-500 font-bold tracking-widest uppercase text-sm mb-4">Casos de Éxito</h2>
-          <p className="font-outfit text-4xl md:text-5xl font-bold">Resultados que trascienden.</p>
+          <h2 className="text-orange-500 font-bold tracking-widest uppercase text-sm mb-4">Trabajos recientes</h2>
+          <p className="font-outfit text-4xl md:text-5xl font-bold">Ejemplos de proyectos realizados.</p>
         </div>
         <a href="#" className="text-zinc-500 hover:text-white transition-colors text-sm font-bold uppercase tracking-widest flex items-center gap-2">
           Ver todos los proyectos <i className="bi bi-arrow-right"></i>
