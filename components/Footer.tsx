@@ -1,5 +1,6 @@
 
 import React from 'react';
+import logoWordmark from '../assets/images/logos/Logo y Texto.png';
 
 export const Footer: React.FC = () => {
   return (
@@ -7,11 +8,14 @@ export const Footer: React.FC = () => {
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-12 mb-20">
           <div>
-            <div className="flex items-center gap-2 mb-6">
+            <div className="flex items-center gap-3 mb-6">
               <div className="w-6 h-6 bg-orange-500 rounded-sm transform rotate-45"></div>
-              <span className="font-outfit text-xl font-bold tracking-tighter">
-                AVRA <span className="text-orange-500">IT</span>
-              </span>
+              <img
+                src={logoWordmark}
+                alt="AVRA IT"
+                className="h-5 w-auto"
+                loading="lazy"
+              />
             </div>
             <p className="text-zinc-500 max-w-sm text-sm">
               Potenciando negocios físicos a través de ingeniería digital premium y estrategias de digitalización de vanguardia.

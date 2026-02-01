@@ -1,5 +1,6 @@
 
 import React from 'react';
+import logoWordmark from '../assets/images/logos/Logo y Texto.png';
 
 interface NavbarProps {
   isScrolled: boolean;
@@ -21,11 +22,14 @@ export const Navbar: React.FC<NavbarProps> = ({ isScrolled }) => {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
-        <a href="#home" className="flex items-center gap-2 group">
+        <a href="#home" className="flex items-center gap-3 group">
           <div className="w-6 h-6 bg-gradient-to-br from-orange-500 to-orange-700 rounded-sm transform rotate-45 group-hover:rotate-180 transition-transform duration-700 shadow-[0_0_15px_rgba(249,115,22,0.4)]"></div>
-          <span className="font-outfit text-xl font-bold tracking-tighter">
-            AVRA <span className="text-orange-500">IT</span>
-          </span>
+          <img
+            src={logoWordmark}
+            alt="AVRA IT"
+            className="h-5 md:h-6 w-auto select-none"
+            loading="eager"
+          />
         </a>
 
         <div className="hidden md:flex items-center gap-10">
