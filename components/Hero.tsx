@@ -90,7 +90,7 @@ export const Hero: React.FC = () => {
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 text-center select-none">
         <div ref={tagRef} className="opacity-0 inline-block px-4 py-1.5 mb-8 rounded-full border border-white/10 bg-white/5 text-orange-500/80 text-[9px] font-black uppercase tracking-[0.4em] backdrop-blur-md">
-          Digital Engineering Suite
+          Estudio de desarrollo web
         </div>
         
         <h1 ref={titleRef} className="opacity-0 font-outfit text-6xl md:text-[9rem] font-extrabold tracking-tighter mb-8 leading-[0.85] text-white">
@@ -98,7 +98,7 @@ export const Hero: React.FC = () => {
         </h1>
         
         <p ref={textRef} className="opacity-0 max-w-xl mx-auto text-base md:text-xl text-zinc-500 mb-12 font-light leading-relaxed tracking-wide">
-          Arquitectura digital de precisión para negocios que exigen trascender la frontera de lo físico.
+          Creamos sitios y plataformas claras, rápidas y fáciles de mantener para negocios que buscan presencia digital sólida.
         </p>
 
         <div ref={buttonsRef} className="flex flex-col md:flex-row items-center justify-center gap-6">
@@ -109,7 +109,7 @@ export const Hero: React.FC = () => {
             <div className="absolute inset-0 bg-gradient-to-r from-orange-600 to-orange-400 opacity-90"></div>
             <div className="absolute inset-[1px] bg-black rounded-full transition-colors group-hover:bg-transparent"></div>
             <span className="relative z-10 text-white font-bold text-sm tracking-widest uppercase flex items-center gap-2">
-              Agendar Visita <i className="bi bi-chevron-right text-[10px]"></i>
+              Agendar llamada <i className="bi bi-chevron-right text-[10px]"></i>
             </span>
           </a>
           
@@ -117,7 +117,7 @@ export const Hero: React.FC = () => {
             href="#casos"
             className="opacity-0 px-10 py-4 border border-white/10 glass-card rounded-full font-bold text-sm tracking-widest uppercase text-zinc-400 hover:text-white hover:border-white/30 transition-all"
           >
-            Ver Proyectos
+            Ver trabajos
           </a>
         </div>
       </div>

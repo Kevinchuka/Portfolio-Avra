@@ -34,31 +34,31 @@ export const About: React.FC = () => {
       name: 'Santino', 
       role: 'Frontend Architect', 
       img: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800&auto=format&fit=crop',
-      description: 'Especialista en interfaces de alto rendimiento y experiencias de usuario cinematográficas.'
+      description: 'Enfocado en interfaces rápidas, accesibles y fáciles de usar.'
     },
     { 
       name: 'Mateo', 
       role: 'Backend Engineer', 
       img: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=800&auto=format&fit=crop',
-      description: 'Arquitecto de sistemas escalables y lógica de negocio compleja bajo estándares de seguridad extrema.'
+      description: 'Diseña integraciones sólidas y bases de datos ordenadas para cada proyecto.'
     },
     { 
       name: 'Kevin', 
       role: 'Marketing & Frontend', 
       img: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=800&auto=format&fit=crop',
-      description: 'Estratega digital enfocado en el crecimiento de marca y desarrollo de interfaces persuasivas.'
+      description: 'Acompaña la comunicación digital y la presentación del servicio.'
     }
   ];
 
   return (
     <div ref={sectionRef} className="max-w-7xl mx-auto px-6">
       <div className="text-center mb-24 max-w-3xl mx-auto">
-        <h2 className="text-orange-500 font-bold tracking-[0.4em] uppercase text-[10px] mb-6">El Núcleo de Avra</h2>
+        <h2 className="text-orange-500 font-bold tracking-[0.4em] uppercase text-[10px] mb-6">Nuestro equipo</h2>
         <p className="font-outfit text-4xl md:text-6xl font-bold mb-8 leading-tight">
-          Sinergia Técnica de <span className="text-zinc-500">Alto Rendimiento.</span>
+          Un estudio pequeño, <span className="text-zinc-500">atento al detalle.</span>
         </p>
         <p className="text-zinc-400 text-lg leading-relaxed">
-          No somos una agencia masiva. Somos un estudio boutique donde cada línea de código y cada píxel es supervisado por los fundadores.
+          Trabajamos de forma directa con cada cliente para mantener procesos claros, tiempos realistas y resultados confiables.
         </p>
       </div>
 
@@ -102,8 +102,8 @@ export const About: React.FC = () => {
 
       <div className="mt-24 p-12 glass-card rounded-[2.5rem] border-white/5 flex flex-col md:flex-row items-center justify-between gap-10">
         <div className="flex-1">
-          <h4 className="font-outfit text-2xl font-bold mb-4 italic">"La perfección no es una meta, es nuestro estándar operativo."</h4>
-          <p className="text-zinc-500 text-sm">Nuestro equipo combina ingeniería de software robusta con una sensibilidad estética de clase mundial.</p>
+          <h4 className="font-outfit text-2xl font-bold mb-4 italic">"Trabajamos con claridad, foco y buena comunicación."</h4>
+          <p className="text-zinc-500 text-sm">Cuidamos la calidad técnica y la experiencia final sin promesas exageradas.</p>
         </div>
         <div className="flex gap-4">
             <div className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-xl text-zinc-400 hover:text-orange-500 transition-all cursor-pointer">

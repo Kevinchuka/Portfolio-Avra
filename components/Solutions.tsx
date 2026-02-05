@@ -31,22 +31,22 @@ export const Solutions: React.FC = () => {
   const services = [
     {
       title: 'Web Institucional',
-      description: 'Presencia corporativa de alto impacto con diseño minimalista y performance optimizada.',
+      description: 'Sitios claros y profesionales para presentar servicios, equipo y propuesta de valor.',
       icon: <i className="bi bi-bank"></i>
     },
     {
       title: 'Landing Pages',
-      description: 'Arquitectura persuasiva diseñada para maximizar conversiones y retorno de inversión.',
+      description: 'Páginas específicas para campañas, lanzamientos o captación de consultas.',
       icon: <i className="bi bi-rocket-takeoff"></i>
     },
     {
       title: 'E-commerce Pro',
-      description: 'Tiendas online escalables con experiencias de compra fluidas y gestión de inventario inteligente.',
+      description: 'Tiendas online con navegación simple, catálogo ordenado y procesos de compra confiables.',
       icon: <i className="bi bi-bag-check"></i>
     },
     {
       title: 'SaaS & Sistemas',
-      description: 'Desarrollamos herramientas a medida para optimizar procesos internos y software como servicio.',
+      description: 'Herramientas a medida para operaciones internas, paneles y automatizaciones.',
       icon: <i className="bi bi-cpu"></i>
     }
   ];
@@ -54,8 +54,8 @@ export const Solutions: React.FC = () => {
   return (
     <div ref={sectionRef} className="max-w-7xl mx-auto px-6">
       <div className="text-center mb-20">
-        <h2 className="text-orange-500 font-bold tracking-widest uppercase text-sm mb-4">Nuestras Soluciones</h2>
-        <p className="font-outfit text-4xl md:text-5xl font-bold">Tecnología sin límites para su visión.</p>
+        <h2 className="text-orange-500 font-bold tracking-widest uppercase text-sm mb-4">Servicios</h2>
+        <p className="font-outfit text-4xl md:text-5xl font-bold">Soluciones digitales a medida, sin exagerar.</p>
       </div>
 
       <div ref={gridRef} className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">

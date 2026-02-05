@@ -3,11 +3,11 @@ import React from 'react';
 
 export const LocalDigitalization: React.FC = () => {
   const features = [
-    "Visita presencial y relevamiento estratégico",
-    "Fotografía profesional de productos y servicios",
-    "Digitalización de catálogos y listas físicas",
-    "Carga estructurada en bases de datos seguras",
-    "Lanzamiento de ecosistema digital completo"
+    "Relevamiento inicial y objetivos claros",
+    "Fotografía y contenidos de productos/servicios",
+    "Digitalización de catálogos y documentos físicos",
+    "Carga organizada en bases de datos seguras",
+    "Publicación y puesta en marcha del sitio"
   ];
 
   return (
@@ -15,13 +15,13 @@ export const LocalDigitalization: React.FC = () => {
       <div className="flex flex-col lg:flex-row items-center gap-16">
         <div className="flex-1">
           <div className="inline-block px-3 py-1 rounded-md bg-orange-500 text-white text-[10px] font-black uppercase tracking-[0.2em] mb-6">
-            Diferencial Exclusivo
+            Acompañamiento real
           </div>
           <h2 className="font-outfit text-4xl md:text-6xl font-bold mb-8 leading-tight">
-            Del mundo físico a la <span className="text-orange-500 underline decoration-white/20 underline-offset-8">vanguardia digital.</span>
+            Del local a lo digital, <span className="text-orange-500 underline decoration-white/20 underline-offset-8">con orden y claridad.</span>
           </h2>
           <p className="text-zinc-400 text-lg mb-10 leading-relaxed max-w-xl">
-            No solo creamos código. Visitamos su empresa, entendemos su operativa y digitalizamos cada átomo de su negocio para convertirlo en una marca digital moderna y competitiva.
+            Conocemos su operación, organizamos la información y la llevamos a un sitio web sólido y fácil de actualizar.
           </p>
           
           <ul className="space-y-4">
@@ -37,7 +37,7 @@ export const LocalDigitalization: React.FC = () => {
 
           <div className="mt-12">
             <a href="#contacto" className="inline-flex items-center gap-2 text-white font-bold group">
-              Solicitar relevamiento presencial 
+              Solicitar una reunión 
               <span className="group-hover:translate-x-2 transition-transform text-orange-500">
                 <i className="bi bi-arrow-right"></i>
               </span>
@@ -55,10 +55,10 @@ export const LocalDigitalization: React.FC = () => {
             {/* Overlay indicators */}
             <div className="absolute top-10 left-10 glass-card p-4 rounded-xl border-orange-500/20 animate-pulse">
               <div className="w-2 h-2 rounded-full bg-orange-500 mb-2"></div>
-              <p className="text-[10px] font-bold uppercase tracking-widest text-zinc-400">Escaneando Datos</p>
+              <p className="text-[10px] font-bold uppercase tracking-widest text-zinc-400">Organizando datos</p>
             </div>
             <div className="absolute bottom-10 right-10 glass-card p-4 rounded-xl border-white/20">
-               <p className="text-[10px] font-bold uppercase tracking-widest text-orange-500">Precisión 99.9%</p>
+               <p className="text-[10px] font-bold uppercase tracking-widest text-orange-500">Proceso confiable</p>
             </div>
           </div>
           {/* Background glow */}
