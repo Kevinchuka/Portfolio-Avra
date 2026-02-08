@@ -1,6 +1,5 @@
-
-import React from 'react';
-import logoWordmark from '../assets/images/logos/Logo y Texto.png';
+import React from "react";
+import logoWordmark from "../assets/images/logos/Logo y Texto.png";
 
 interface NavbarProps {
   isScrolled: boolean;
@@ -8,17 +7,17 @@ interface NavbarProps {
 
 export const Navbar: React.FC<NavbarProps> = ({ isScrolled }) => {
   const navLinks = [
-    { name: 'Soluciones', href: '#soluciones' },
-    { name: 'Digitalización', href: '#digitalizacion' },
-    { name: 'Casos', href: '#casos' },
-    { name: 'Proceso', href: '#proceso' },
-    { name: 'Nosotros', href: '#nosotros' },
+    { name: "Soluciones", href: "#soluciones" },
+    { name: "Digitalización", href: "#digitalizacion" },
+    { name: "Casos", href: "#casos" },
+    { name: "Proceso", href: "#proceso" },
+    { name: "Nosotros", href: "#nosotros" },
   ];
 
   return (
-    <nav 
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-700 ${
-        isScrolled ? 'py-3 glass-nav' : 'py-8 bg-transparent'
+    <nav
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-200 ${
+        isScrolled ? "py-3 glass-nav" : "py-8 transparent-nav"
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
@@ -34,7 +33,7 @@ export const Navbar: React.FC<NavbarProps> = ({ isScrolled }) => {
 
         <div className="hidden md:flex items-center gap-10">
           {navLinks.map((link) => (
-            <a 
+            <a
               key={link.name}
               href={link.href}
               className="text-[10px] font-bold text-zinc-500 hover:text-orange-500 transition-colors tracking-[0.2em] uppercase"
@@ -42,7 +41,7 @@ export const Navbar: React.FC<NavbarProps> = ({ isScrolled }) => {
               {link.name}
             </a>
           ))}
-          <a 
+          <a
             href="#contacto"
             className="relative px-6 py-2.5 rounded-full overflow-hidden group transition-all"
           >
@@ -54,9 +53,9 @@ export const Navbar: React.FC<NavbarProps> = ({ isScrolled }) => {
         </div>
 
         <div className="md:hidden">
-           <button className="text-white opacity-50">
-             <i className="bi bi-list text-2xl"></i>
-           </button>
+          <button className="text-white opacity-50">
+            <i className="bi bi-list text-2xl"></i>
+          </button>
         </div>
       </div>
     </nav>
