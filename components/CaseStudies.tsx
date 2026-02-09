@@ -1,90 +1,11 @@
 
 import React, { useEffect, useState } from 'react';
 
-import magiaHero from '../assets/images/projects/ECommerce-MagiaEncapsulada/Principal-Image.png';
-import magiaHome from '../assets/images/projects/ECommerce-MagiaEncapsulada/1-Home.png';
-import magiaProduct from '../assets/images/projects/ECommerce-MagiaEncapsulada/2-ProductPage.png';
-import magiaDashboardCreate from '../assets/images/projects/ECommerce-MagiaEncapsulada/3-AddProduct-Dashboard.png';
-import magiaDashboardList from '../assets/images/projects/ECommerce-MagiaEncapsulada/4-ProductList-Dashboard.png';
-import magiaShipping from '../assets/images/projects/ECommerce-MagiaEncapsulada/5-AddShippingAddress.png';
-import magiaCart from '../assets/images/projects/ECommerce-MagiaEncapsulada/6-PurchaseOrderCart.png';
-import magiaOrdersBuyer from '../assets/images/projects/ECommerce-MagiaEncapsulada/7-OrderList-BuyerView.png';
-import magiaOrdersAdmin from '../assets/images/projects/ECommerce-MagiaEncapsulada/8-OrderList-Dashboard.png';
+import { projects } from '../data/projects';
 
 export const CaseStudies: React.FC = () => {
   const [activeProjectIndex, setActiveProjectIndex] = useState<number | null>(null);
-  const cases = [
-    {
-      title: 'Aurora Logistics',
-      category: 'SaaS / Optimización',
-      image: 'https://picsum.photos/seed/aurora/800/600',
-      description: 'Panel interno para gestionar inventario, tiempos y reportes operativos.',
-      summary: 'Un hub operativo con foco en métricas, reportes automáticos y seguimiento de flotas.',
-      highlights: [
-        'Dashboard en tiempo real con KPIs de inventario.',
-        'Alertas automáticas para tiempos críticos.',
-        'Reportes descargables para equipos internos.'
-      ],
-      details: [
-        'El equipo necesitaba un panel operativo que redujera tiempos de respuesta y ordenara flujos de inventario.',
-        'Se diseñó una interfaz modular con reportes descargables y alertas configurables para operaciones críticas.'
-      ]
-    },
-    {
-      title: 'Vanguard Realty',
-      category: 'Real Estate / Web',
-      image: 'https://picsum.photos/seed/vanguard/800/600',
-      description: 'Sitio informativo con catálogo de propiedades y formularios de contacto.',
-      summary: 'Experiencia responsive con fichas de propiedades, filtros avanzados y contacto directo.',
-      highlights: [
-        'Ficha de propiedad con galería multimedia.',
-        'Formularios segmentados por tipo de cliente.',
-        'Optimización SEO para búsquedas locales.'
-      ],
-      details: [
-        'El sitio fue pensado para destacar propiedades premium con una navegación clara y llamadas a la acción directas.',
-        'Se priorizó la performance en móvil para mejorar la captación de leads desde búsquedas locales.'
-      ]
-    },
-    {
-      title: 'Magia Encapsulada',
-      category: 'E-commerce / Full Stack',
-      image: magiaHero,
-      description: 'Plataforma e-commerce full stack con checkout, dashboard y control total de pedidos.',
-      summary: 'E-commerce customizado para una marca artesanal con catálogo dinámico, pagos seguros y panel administrativo.',
-      highlights: [
-        'Checkout y pagos seguros con Stripe.',
-        'Dashboard con gestión de productos y pedidos.',
-        'Arquitectura event-driven con Inngest.',
-        'Autenticación y roles con Clerk.'
-      ],
-      details: [
-        'Proyecto full-stack desarrollado desde cero para una marca artesanal con alcance global y un flujo de compra completo.',
-        'Incluye administración de productos, pedidos y contenido sin depender de terceros, con foco en escalabilidad y seguridad.',
-        'La experiencia de usuario prioriza velocidad, SEO y una interfaz clara tanto para compradores como para administradores.'
-      ],
-      techStack: [
-        'Next.js',
-        'Tailwind CSS',
-        'MongoDB',
-        'Stripe',
-        'Clerk',
-        'Inngest'
-      ],
-      demoUrl: 'https://magia-encapsulada.vercel.app/',
-      gallery: [
-        magiaHome,
-        magiaProduct,
-        magiaDashboardCreate,
-        magiaDashboardList,
-        magiaShipping,
-        magiaCart,
-        magiaOrdersBuyer,
-        magiaOrdersAdmin
-      ]
-    }
-  ];
-  const activeProject = activeProjectIndex !== null ? cases[activeProjectIndex] : null;
+  const activeProject = activeProjectIndex !== null ? projects[activeProjectIndex] : null;
 
   useEffect(() => {
     if (!activeProject) {
@@ -117,7 +38,7 @@ export const CaseStudies: React.FC = () => {
       </div>
 
       <div className="grid lg:grid-cols-3 gap-10">
-        {cases.map((project, idx) => (
+        {projects.map((project, idx) => (
           <div
             key={idx}
             className="group cursor-pointer"
