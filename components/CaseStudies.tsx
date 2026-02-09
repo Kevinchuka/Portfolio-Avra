@@ -10,7 +10,6 @@ import magiaShipping from '../assets/images/projects/ECommerce-MagiaEncapsulada/
 import magiaCart from '../assets/images/projects/ECommerce-MagiaEncapsulada/6-PurchaseOrderCart.png';
 import magiaOrdersBuyer from '../assets/images/projects/ECommerce-MagiaEncapsulada/7-OrderList-BuyerView.png';
 import magiaOrdersAdmin from '../assets/images/projects/ECommerce-MagiaEncapsulada/8-OrderList-Dashboard.png';
-import magiaDetailsMarkdown from '../assets/images/projects/ECommerce-MagiaEncapsulada/datos.md?raw';
 
 export const CaseStudies: React.FC = () => {
   const [activeProjectIndex, setActiveProjectIndex] = useState<number | null>(null);
@@ -25,6 +24,10 @@ export const CaseStudies: React.FC = () => {
         'Dashboard en tiempo real con KPIs de inventario.',
         'Alertas automáticas para tiempos críticos.',
         'Reportes descargables para equipos internos.'
+      ],
+      details: [
+        'El equipo necesitaba un panel operativo que redujera tiempos de respuesta y ordenara flujos de inventario.',
+        'Se diseñó una interfaz modular con reportes descargables y alertas configurables para operaciones críticas.'
       ]
     },
     {
@@ -37,6 +40,10 @@ export const CaseStudies: React.FC = () => {
         'Ficha de propiedad con galería multimedia.',
         'Formularios segmentados por tipo de cliente.',
         'Optimización SEO para búsquedas locales.'
+      ],
+      details: [
+        'El sitio fue pensado para destacar propiedades premium con una navegación clara y llamadas a la acción directas.',
+        'Se priorizó la performance en móvil para mejorar la captación de leads desde búsquedas locales.'
       ]
     },
     {
@@ -51,6 +58,11 @@ export const CaseStudies: React.FC = () => {
         'Arquitectura event-driven con Inngest.',
         'Autenticación y roles con Clerk.'
       ],
+      details: [
+        'Proyecto full-stack desarrollado desde cero para una marca artesanal con alcance global y un flujo de compra completo.',
+        'Incluye administración de productos, pedidos y contenido sin depender de terceros, con foco en escalabilidad y seguridad.',
+        'La experiencia de usuario prioriza velocidad, SEO y una interfaz clara tanto para compradores como para administradores.'
+      ],
       techStack: [
         'Next.js',
         'Tailwind CSS',
@@ -60,7 +72,6 @@ export const CaseStudies: React.FC = () => {
         'Inngest'
       ],
       demoUrl: 'https://magia-encapsulada.vercel.app/',
-      markdownDetails: magiaDetailsMarkdown,
       gallery: [
         magiaHome,
         magiaProduct,
@@ -87,9 +98,12 @@ export const CaseStudies: React.FC = () => {
     };
 
     window.addEventListener('keydown', handleKeyDown);
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
 
     return () => {
       window.removeEventListener('keydown', handleKeyDown);
+      document.body.style.overflow = previousOverflow;
     };
   }, [activeProject]);
 
@@ -147,10 +161,10 @@ export const CaseStudies: React.FC = () => {
           onClick={() => setActiveProjectIndex(null)}
         >
           <div
-            className="relative max-w-5xl w-full bg-zinc-950 border border-white/10 rounded-3xl overflow-hidden shadow-2xl"
+            className="relative max-w-5xl w-full max-h-[75vh] bg-zinc-950 border border-white/10 rounded-3xl overflow-hidden shadow-2xl"
             onClick={(event) => event.stopPropagation()}
           >
-            <div className="flex flex-col lg:flex-row gap-10 p-8 lg:p-10">
+            <div className="flex flex-col lg:flex-row gap-10 p-8 lg:p-10 overflow-y-auto max-h-[75vh]">
               <div className="lg:w-1/2">
                 <div className="relative overflow-hidden rounded-2xl aspect-[4/3] bg-zinc-900">
                   <img
@@ -200,12 +214,14 @@ export const CaseStudies: React.FC = () => {
                     </div>
                   </div>
                 )}
-                {activeProject.markdownDetails && (
-                  <div className="bg-black/50 border border-white/10 rounded-2xl p-4 max-h-64 overflow-y-auto">
-                    <h4 className="text-sm font-bold uppercase tracking-widest text-zinc-400 mb-3">Detalles completos</h4>
-                    <pre className="whitespace-pre-wrap text-xs text-zinc-300 leading-relaxed">
-                      {activeProject.markdownDetails}
-                    </pre>
+                {activeProject.details && (
+                  <div>
+                    <h4 className="text-sm font-bold uppercase tracking-widest text-zinc-400 mb-3">Detalles del proyecto</h4>
+                    <div className="space-y-3 text-sm text-zinc-300 leading-relaxed">
+                      {activeProject.details.map((detail, index) => (
+                        <p key={index}>{detail}</p>
+                      ))}
+                    </div>
                   </div>
                 )}
                 {activeProject.demoUrl && (
