@@ -157,7 +157,7 @@ export const CaseStudies: React.FC = () => {
 
       {activeProject && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm px-6 py-10"
+          className="fixed inset-0 z-[200] flex items-center justify-center bg-black/80 backdrop-blur-sm px-6 py-10"
           onClick={() => setActiveProjectIndex(null)}
         >
           <div
