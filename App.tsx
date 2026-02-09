@@ -37,11 +37,11 @@ const App: React.FC = () => {
           <LocalDigitalization />
         </section>
 
-        <section id="casos" className="relative z-10 py-24 md:py-32">
+        <section id="casos" className="relative z-30 py-24 md:py-32">
           <CaseStudies />
         </section>
 
-        <section id="proceso" className="relative z-10 py-24 md:py-32 bg-zinc-950">
+        <section id="proceso" className="relative z-0 py-24 md:py-32 bg-zinc-950">
           <Process />
         </section>
 
