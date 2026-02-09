@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import magiaHero from '../assets/images/projects/ECommerce-MagiaEncapsulada/Principal-Image.png';
 import magiaHome from '../assets/images/projects/ECommerce-MagiaEncapsulada/1-Home.png';
@@ -75,6 +75,24 @@ export const CaseStudies: React.FC = () => {
   ];
   const activeProject = activeProjectIndex !== null ? cases[activeProjectIndex] : null;
 
+  useEffect(() => {
+    if (!activeProject) {
+      return;
+    }
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setActiveProjectIndex(null);
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [activeProject]);
+
   return (
     <div className="max-w-7xl mx-auto px-6">
       <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
@@ -124,8 +142,14 @@ export const CaseStudies: React.FC = () => {
       </div>
 
       {activeProject && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm px-6 py-10">
-          <div className="relative max-w-5xl w-full bg-zinc-950 border border-white/10 rounded-3xl overflow-hidden shadow-2xl">
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm px-6 py-10"
+          onClick={() => setActiveProjectIndex(null)}
+        >
+          <div
+            className="relative max-w-5xl w-full bg-zinc-950 border border-white/10 rounded-3xl overflow-hidden shadow-2xl"
+            onClick={(event) => event.stopPropagation()}
+          >
             <div className="flex flex-col lg:flex-row gap-10 p-8 lg:p-10">
               <div className="lg:w-1/2">
                 <div className="relative overflow-hidden rounded-2xl aspect-[4/3] bg-zinc-900">
