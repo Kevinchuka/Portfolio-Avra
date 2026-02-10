@@ -4,9 +4,9 @@ import logoWordmark from '../assets/images/logos/Logo y Texto.png';
 
 export const Footer: React.FC = () => {
   return (
-    <footer className="bg-black py-20 border-t border-white/5">
+    <footer className="bg-black py-12 sm:py-16 lg:py-20 border-t border-white/5">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-12 mb-20">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-10 lg:gap-12 mb-12 sm:mb-16 lg:mb-20">
           <div>
             <div className="flex items-center gap-3 mb-6">
               <div className="w-6 h-6 bg-orange-500 rounded-sm transform rotate-45"></div>
@@ -15,6 +15,7 @@ export const Footer: React.FC = () => {
                 alt="AVRA IT"
                 className="h-5 w-auto"
                 loading="lazy"
+                decoding="async"
               />
             </div>
             <p className="text-zinc-500 max-w-sm text-sm">
@@ -22,7 +23,7 @@ export const Footer: React.FC = () => {
             </p>
           </div>
 
-          <div className="flex gap-16">
+          <div className="flex flex-col sm:flex-row gap-10 sm:gap-16">
             <div className="space-y-4">
               <h4 className="text-white font-bold text-sm tracking-widest uppercase">Explorar</h4>
               <ul className="text-zinc-500 text-sm space-y-2">
@@ -41,7 +42,7 @@ export const Footer: React.FC = () => {
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row justify-between items-center pt-10 border-t border-white/5 text-[10px] text-zinc-600 font-bold uppercase tracking-[0.2em]">
+        <div className="flex flex-col md:flex-row justify-between items-center pt-8 sm:pt-10 border-t border-white/5 text-[10px] text-zinc-600 font-bold uppercase tracking-[0.2em] gap-4 md:gap-0 text-center md:text-left">
           <p>© 2024 AVRA IT - Todos los derechos reservados.</p>
           <p>Hecho por el equipo Avra con foco en claridad y soporte.</p>
         </div>

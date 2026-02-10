@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import logoWordmark from "../assets/images/logos/Logo y Texto.png";
 
 interface NavbarProps {
@@ -6,6 +6,7 @@ interface NavbarProps {
 }
 
 export const Navbar: React.FC<NavbarProps> = ({ isScrolled }) => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navLinks = [
     { name: "Soluciones", href: "#soluciones" },
     { name: "Digitalización", href: "#digitalizacion" },
@@ -17,10 +18,10 @@ export const Navbar: React.FC<NavbarProps> = ({ isScrolled }) => {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-200 ${
-        isScrolled ? "py-3 glass-nav" : "py-8 transparent-nav"
+        isScrolled ? "py-3 glass-nav" : "py-5 md:py-7 transparent-nav"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 flex justify-between items-center">
         <a href="#home" className="flex items-center gap-3 group">
           <div className="w-6 h-6 bg-gradient-to-br from-orange-500 to-orange-700 rounded-sm transform rotate-45 group-hover:rotate-180 transition-transform duration-700 shadow-[0_0_15px_rgba(249,115,22,0.4)]"></div>
           <img
@@ -28,6 +29,7 @@ export const Navbar: React.FC<NavbarProps> = ({ isScrolled }) => {
             alt="AVRA IT"
             className="h-5 md:h-6 w-auto select-none"
             loading="eager"
+            decoding="async"
           />
         </a>
 
@@ -53,9 +55,43 @@ export const Navbar: React.FC<NavbarProps> = ({ isScrolled }) => {
         </div>
 
         <div className="md:hidden">
-          <button className="text-white opacity-50">
-            <i className="bi bi-list text-2xl"></i>
+          <button
+            type="button"
+            className="text-white opacity-70 hover:opacity-100 transition"
+            aria-label="Abrir menú"
+            aria-expanded={isMenuOpen}
+            aria-controls="mobile-menu"
+            onClick={() => setIsMenuOpen((open) => !open)}
+          >
+            <i className={`bi ${isMenuOpen ? "bi-x" : "bi-list"} text-2xl`}></i>
           </button>
+        </div>
+      </div>
+
+      <div
+        id="mobile-menu"
+        className={`md:hidden overflow-hidden transition-[max-height,opacity] duration-300 ${
+          isMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+        }`}
+      >
+        <div className="mx-4 sm:mx-6 mt-4 rounded-3xl border border-white/10 bg-black/70 backdrop-blur-xl p-6 space-y-6">
+          {navLinks.map((link) => (
+            <a
+              key={link.name}
+              href={link.href}
+              className="block text-xs font-bold text-zinc-300 hover:text-orange-500 transition-colors tracking-[0.25em] uppercase"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              {link.name}
+            </a>
+          ))}
+          <a
+            href="#contacto"
+            className="block text-center text-xs font-black text-orange-500 uppercase tracking-[0.25em] border border-orange-500/30 rounded-full py-3"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Contacto
+          </a>
         </div>
       </div>
     </nav>

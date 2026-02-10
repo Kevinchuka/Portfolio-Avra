@@ -62,7 +62,7 @@ export const Hero: React.FC = () => {
   return (
     <div
       ref={containerRef}
-      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black"
+      className="relative min-h-[100svh] flex items-center justify-center overflow-hidden bg-black pt-24 pb-16"
       style={{ '--mouse-x': '50%', '--mouse-y': '50%' } as React.CSSProperties}
     >
       {/* Background Effects */}
@@ -88,34 +88,34 @@ export const Hero: React.FC = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black"></div>
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 text-center select-none">
-        <div ref={tagRef} className="opacity-0 inline-block px-4 py-1.5 mb-8 rounded-full border border-white/10 bg-white/5 text-orange-500/80 text-[9px] font-black uppercase tracking-[0.4em] backdrop-blur-md">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 text-center select-none">
+        <div ref={tagRef} className="opacity-0 inline-block px-4 py-1.5 mb-6 rounded-full border border-white/10 bg-white/5 text-orange-500/80 text-[9px] sm:text-[10px] font-black uppercase tracking-[0.35em] sm:tracking-[0.4em] backdrop-blur-md">
           Estudio de desarrollo web
         </div>
 
-        <h1 ref={titleRef} className="opacity-0 font-outfit text-6xl md:text-[9rem] font-extrabold tracking-tighter mb-8 leading-[0.85] text-white">
+        <h1 ref={titleRef} className="opacity-0 font-outfit text-4xl sm:text-5xl md:text-7xl lg:text-[9rem] font-extrabold tracking-tighter mb-6 sm:mb-8 leading-[0.9] text-white">
           Avra <span className="text-transparent bg-clip-text bg-gradient-to-b from-orange-400 to-orange-800">IT</span>
         </h1>
 
-        <p ref={textRef} className="opacity-0 max-w-xl mx-auto text-base md:text-xl text-zinc-500 mb-12 font-light leading-relaxed tracking-wide">
+        <p ref={textRef} className="opacity-0 max-w-xl mx-auto text-sm sm:text-base md:text-xl text-zinc-400 mb-10 sm:mb-12 font-light leading-relaxed tracking-wide">
           Creamos sitios y plataformas claras, rápidas y fáciles de mantener para negocios que buscan presencia digital sólida.
         </p>
 
-        <div ref={buttonsRef} className="flex flex-col md:flex-row items-center justify-center gap-6">
+        <div ref={buttonsRef} className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
           <a
             href="#contacto"
-            className="opacity-0 group relative px-10 py-4 overflow-hidden rounded-full transition-all duration-300 hover:scale-105 active:scale-95"
+            className="opacity-0 group relative w-full sm:w-auto px-8 sm:px-10 py-4 overflow-hidden rounded-full transition-all duration-300 hover:scale-105 active:scale-95"
           >
             <div className="absolute inset-0 bg-gradient-to-r from-orange-600 to-orange-400 opacity-90"></div>
             <div className="absolute inset-[1px] bg-black rounded-full transition-colors group-hover:bg-transparent"></div>
-            <span className="relative z-10 text-white font-bold text-sm tracking-widest uppercase flex items-center gap-2">
+            <span className="relative z-10 text-white font-bold text-xs sm:text-sm tracking-[0.2em] sm:tracking-widest uppercase flex items-center justify-center gap-2">
               Contacto <i className="bi bi-chevron-right text-[10px]"></i>
             </span>
           </a>
 
           <a
             href="#casos"
-            className="opacity-0 px-10 py-4 border border-white/10 glass-card rounded-full font-bold text-sm tracking-widest uppercase text-zinc-400 hover:text-white hover:border-white/30 transition-all"
+            className="opacity-0 w-full sm:w-auto px-8 sm:px-10 py-4 border border-white/10 glass-card rounded-full font-bold text-xs sm:text-sm tracking-[0.2em] sm:tracking-widest uppercase text-zinc-300 hover:text-white hover:border-white/30 transition-all text-center"
           >
             Ver trabajos
           </a>

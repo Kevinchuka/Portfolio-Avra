@@ -75,24 +75,24 @@ export const Process: React.FC = () => {
   ];
 
   return (
-    <div ref={containerRef} className="max-w-6xl mx-auto px-6 relative py-20 overflow-visible">
+    <div ref={containerRef} className="max-w-6xl mx-auto px-6 relative py-16 sm:py-20 overflow-visible">
       
       {/* Subtle Background Typography - Reduced Scale */}
       <div className="absolute inset-0 flex items-center justify-between opacity-[0.02] pointer-events-none select-none z-0 px-4">
-        <h2 className="font-outfit text-8xl md:text-[10rem] font-black tracking-tighter">PHASE</h2>
-        <h2 className="font-outfit text-8xl md:text-[10rem] font-black tracking-tighter">FLOW</h2>
+        <h2 className="font-outfit text-5xl sm:text-7xl md:text-[10rem] font-black tracking-tighter">PHASE</h2>
+        <h2 className="font-outfit text-5xl sm:text-7xl md:text-[10rem] font-black tracking-tighter">FLOW</h2>
       </div>
 
       {/* Header Info - More compact */}
-      <div className="relative z-20 mb-20 text-center">
+      <div className="relative z-20 mb-12 sm:mb-16 md:mb-20 text-center">
         <span className="text-orange-500 font-black text-[9px] uppercase tracking-[0.6em] mb-2 block">Nuestro proceso</span>
-        <h2 className="font-outfit text-4xl md:text-5xl font-bold tracking-tight text-white">
+        <h2 className="font-outfit text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white">
           Un flujo claro <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-700">de trabajo</span>
         </h2>
       </div>
 
       {/* Horizontal Flow Container - Reduced min-height */}
-      <div className="relative min-h-[350px] flex flex-col lg:flex-row items-center justify-between lg:gap-8">
+      <div className="relative min-h-[320px] sm:min-h-[350px] flex flex-col lg:flex-row items-center justify-between lg:gap-8">
         
         {/* SVG Connector Line - Shallower Curves */}
         <div className="absolute inset-0 z-0 hidden lg:block py-10">
@@ -119,7 +119,7 @@ export const Process: React.FC = () => {
         {steps.map((step, idx) => (
           <div 
             key={idx} 
-            className={`node-item opacity-0 relative z-10 w-full lg:w-1/4 flex flex-col items-center lg:mb-0 mb-12 ${
+            className={`node-item opacity-0 relative z-10 w-full lg:w-1/4 flex flex-col items-center lg:mb-0 mb-10 sm:mb-12 ${
               step.side === 'top' ? 'lg:-translate-y-12 node-top' : 'lg:translate-y-12 node-bottom'
             }`}
           >
@@ -134,7 +134,7 @@ export const Process: React.FC = () => {
                   {step.id}
                 </span>
                 
-                <i className={`bi ${step.icon} text-2xl text-zinc-500 group-hover:text-orange-500 transition-all duration-500 group-hover:scale-110 z-10`}></i>
+                <i className={`bi ${step.icon} text-xl sm:text-2xl text-zinc-500 group-hover:text-orange-500 transition-all duration-500 group-hover:scale-110 z-10`}></i>
                 
                 {/* Glow Core */}
                 <div className="absolute inset-0 bg-radial-gradient from-orange-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
@@ -150,10 +150,10 @@ export const Process: React.FC = () => {
 
             {/* Content Text - Refined Proportions */}
             <div className="text-center px-4">
-              <h3 className="font-outfit text-lg font-bold mb-2 text-white/90 group-hover:text-orange-500 transition-colors">
+              <h3 className="font-outfit text-base sm:text-lg font-bold mb-2 text-white/90 group-hover:text-orange-500 transition-colors">
                 {step.title}
               </h3>
-              <p className="text-zinc-500 text-[10px] leading-relaxed max-w-[160px] mx-auto opacity-80 group-hover:opacity-100 transition-opacity">
+              <p className="text-zinc-500 text-[11px] sm:text-[12px] leading-relaxed max-w-[180px] mx-auto opacity-80 group-hover:opacity-100 transition-opacity">
                 {step.desc}
               </p>
             </div>
