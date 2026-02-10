@@ -27,17 +27,17 @@ export const CaseStudies: React.FC = () => {
 
   return (
     <div className="max-w-7xl mx-auto px-6">
-      <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+      <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-10 sm:mb-12 md:mb-16 gap-6">
         <div>
-          <h2 className="text-orange-500 font-bold tracking-widest uppercase text-sm mb-4">Trabajos recientes</h2>
-          <p className="font-outfit text-4xl md:text-5xl font-bold">Ejemplos de proyectos realizados.</p>
+          <h2 className="text-orange-500 font-bold tracking-[0.3em] uppercase text-xs sm:text-sm mb-4">Trabajos recientes</h2>
+          <p className="font-outfit text-3xl sm:text-4xl md:text-5xl font-bold">Ejemplos de proyectos realizados.</p>
         </div>
         <a href="#" className="text-zinc-500 hover:text-white transition-colors text-sm font-bold uppercase tracking-widest flex items-center gap-2">
           Ver todos los proyectos <i className="bi bi-arrow-right"></i>
         </a>
       </div>
 
-      <div className="grid lg:grid-cols-3 gap-10">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
         {projects.map((project, idx) => (
           <div
             key={idx}
@@ -56,6 +56,8 @@ export const CaseStudies: React.FC = () => {
                 src={project.image} 
                 alt={project.title} 
                 className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 group-hover:rotate-1 opacity-70 group-hover:opacity-100"
+                loading="lazy"
+                decoding="async"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60"></div>
               <div className="absolute bottom-6 left-6 right-6">
@@ -64,7 +66,7 @@ export const CaseStudies: React.FC = () => {
                 </span>
               </div>
             </div>
-            <h3 className="font-outfit text-2xl font-bold mb-2 group-hover:text-orange-500 transition-colors">{project.title}</h3>
+            <h3 className="font-outfit text-xl sm:text-2xl font-bold mb-2 group-hover:text-orange-500 transition-colors">{project.title}</h3>
             <p className="text-zinc-400 text-sm leading-relaxed">{project.description}</p>
             <button className="mt-4 text-xs font-bold uppercase tracking-widest text-orange-400 hover:text-orange-300 transition-colors flex items-center gap-2">
               Ver detalles <i className="bi bi-plus-lg"></i>
@@ -75,27 +77,38 @@ export const CaseStudies: React.FC = () => {
 
       {activeProject && (
         <div
-          className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/80 backdrop-blur-sm px-6 py-10"
+          className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/80 backdrop-blur-sm px-4 sm:px-6 py-8 sm:py-10"
           onClick={() => setActiveProjectIndex(null)}
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="project-dialog-title"
         >
           <div
-            className="relative max-w-5xl w-full max-h-[75vh] bg-zinc-950 border border-white/10 rounded-3xl overflow-hidden shadow-2xl"
+            className="relative max-w-5xl w-full max-h-[85vh] sm:max-h-[75vh] bg-zinc-950 border border-white/10 rounded-3xl overflow-hidden shadow-2xl"
             onClick={(event) => event.stopPropagation()}
           >
-            <div className="flex flex-col lg:flex-row gap-10 p-8 lg:p-10 overflow-y-auto max-h-[75vh]">
+            <div className="flex flex-col lg:flex-row gap-8 lg:gap-10 p-6 sm:p-8 lg:p-10 overflow-y-auto max-h-[85vh] sm:max-h-[75vh]">
               <div className="lg:w-1/2">
                 <div className="relative overflow-hidden rounded-2xl aspect-[4/3] bg-zinc-900">
                   <img
                     src={activeProject.image}
                     alt={activeProject.title}
                     className="w-full h-full object-cover"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </div>
                 {activeProject.gallery && (
                   <div className="grid grid-cols-2 gap-3 mt-6">
                     {activeProject.gallery.map((image, index) => (
                       <div key={index} className="rounded-xl overflow-hidden border border-white/10 bg-zinc-900">
-                        <img src={image} alt={`${activeProject.title} ${index + 1}`} className="w-full h-full object-cover" />
+                        <img
+                          src={image}
+                          alt={`${activeProject.title} ${index + 1}`}
+                          className="w-full h-full object-cover"
+                          loading="lazy"
+                          decoding="async"
+                        />
                       </div>
                     ))}
                   </div>
@@ -104,7 +117,9 @@ export const CaseStudies: React.FC = () => {
               <div className="lg:w-1/2 space-y-6">
                 <div>
                   <span className="text-xs font-bold text-orange-400 uppercase tracking-widest">{activeProject.category}</span>
-                  <h3 className="font-outfit text-3xl md:text-4xl font-bold mt-3">{activeProject.title}</h3>
+                  <h3 id="project-dialog-title" className="font-outfit text-2xl sm:text-3xl md:text-4xl font-bold mt-3">
+                    {activeProject.title}
+                  </h3>
                   <p className="text-zinc-300 mt-4">{activeProject.summary}</p>
                 </div>
                 {activeProject.highlights && (

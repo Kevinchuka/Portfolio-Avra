@@ -52,12 +52,12 @@ export const About: React.FC = () => {
 
   return (
     <div ref={sectionRef} className="max-w-7xl mx-auto px-6">
-      <div className="text-center mb-24 max-w-3xl mx-auto">
-        <h2 className="text-orange-500 font-bold tracking-[0.4em] uppercase text-[10px] mb-6">Nuestro equipo</h2>
-        <p className="font-outfit text-4xl md:text-6xl font-bold mb-8 leading-tight">
+      <div className="text-center mb-16 sm:mb-20 md:mb-24 max-w-3xl mx-auto">
+        <h2 className="text-orange-500 font-bold tracking-[0.35em] uppercase text-[10px] mb-6">Nuestro equipo</h2>
+        <p className="font-outfit text-3xl sm:text-4xl md:text-6xl font-bold mb-6 sm:mb-8 leading-tight">
           Un estudio pequeño, <span className="text-zinc-500">atento al detalle.</span>
         </p>
-        <p className="text-zinc-400 text-lg leading-relaxed">
+        <p className="text-zinc-400 text-base sm:text-lg leading-relaxed">
           Trabajamos de forma directa con cada cliente para mantener procesos claros, tiempos realistas y resultados confiables.
         </p>
       </div>
@@ -73,6 +73,8 @@ export const About: React.FC = () => {
                   src={member.img} 
                   alt={member.name} 
                   className="w-full h-full object-cover grayscale brightness-75 group-hover:grayscale-0 group-hover:brightness-100 group-hover:scale-105 transition-all duration-1000 ease-in-out" 
+                  loading="lazy"
+                  decoding="async"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-60"></div>
                 
@@ -83,8 +85,8 @@ export const About: React.FC = () => {
                 </div>
               </div>
 
-              <div className="p-8 flex-grow flex flex-col justify-end bg-gradient-to-b from-transparent to-black/80">
-                <h3 className="font-outfit text-3xl font-bold text-white mb-2 group-hover:text-orange-500 transition-colors">
+              <div className="p-6 sm:p-8 flex-grow flex flex-col justify-end bg-gradient-to-b from-transparent to-black/80">
+                <h3 className="font-outfit text-2xl sm:text-3xl font-bold text-white mb-2 group-hover:text-orange-500 transition-colors">
                   {member.name}
                 </h3>
                 <p className="text-orange-500/80 text-xs font-bold uppercase tracking-widest mb-4">
@@ -100,12 +102,12 @@ export const About: React.FC = () => {
         ))}
       </div>
 
-      <div className="mt-24 p-12 glass-card rounded-[2.5rem] border-white/5 flex flex-col md:flex-row items-center justify-between gap-10">
+      <div className="mt-16 sm:mt-20 md:mt-24 p-8 sm:p-10 md:p-12 glass-card rounded-[2.5rem] border-white/5 flex flex-col md:flex-row items-center justify-between gap-8 md:gap-10">
         <div className="flex-1">
-          <h4 className="font-outfit text-2xl font-bold mb-4 italic">"Trabajamos con claridad, foco y buena comunicación."</h4>
+          <h4 className="font-outfit text-xl sm:text-2xl font-bold mb-4 italic">"Trabajamos con claridad, foco y buena comunicación."</h4>
           <p className="text-zinc-500 text-sm">Cuidamos la calidad técnica y la experiencia final sin promesas exageradas.</p>
         </div>
-        <div className="flex gap-4">
+        <div className="flex gap-4 flex-wrap justify-center md:justify-start">
             <div className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-xl text-zinc-400 hover:text-orange-500 transition-all cursor-pointer">
               <i className="bi bi-briefcase"></i>
             </div>

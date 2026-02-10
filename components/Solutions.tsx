@@ -53,21 +53,21 @@ export const Solutions: React.FC = () => {
 
   return (
     <div ref={sectionRef} className="max-w-7xl mx-auto px-6">
-      <div className="text-center mb-20">
-        <h2 className="text-orange-500 font-bold tracking-widest uppercase text-sm mb-4">Servicios</h2>
-        <p className="font-outfit text-4xl md:text-5xl font-bold">Soluciones digitales a medida, sin exagerar.</p>
+      <div className="text-center mb-12 sm:mb-16 md:mb-20">
+        <h2 className="text-orange-500 font-bold tracking-[0.3em] uppercase text-xs sm:text-sm mb-4">Servicios</h2>
+        <p className="font-outfit text-3xl sm:text-4xl md:text-5xl font-bold">Soluciones digitales a medida, sin exagerar.</p>
       </div>
 
-      <div ref={gridRef} className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div ref={gridRef} className="grid gap-6 md:grid-cols-2 lg:grid-cols-4 md:gap-8">
         {services.map((service, index) => (
           <div 
             key={index}
-            className="opacity-0 glass-card p-8 rounded-3xl group hover:border-orange-500/50 transition-all duration-500 hover:-translate-y-2"
+            className="opacity-0 glass-card p-6 sm:p-8 rounded-3xl group hover:border-orange-500/50 transition-all duration-500 hover:-translate-y-2"
           >
-            <div className="text-3xl mb-6 bg-white/5 w-16 h-16 flex items-center justify-center rounded-2xl group-hover:bg-orange-500/20 text-orange-400 transition-colors">
+            <div className="text-2xl sm:text-3xl mb-5 sm:mb-6 bg-white/5 w-14 h-14 sm:w-16 sm:h-16 flex items-center justify-center rounded-2xl group-hover:bg-orange-500/20 text-orange-400 transition-colors">
               {service.icon}
             </div>
-            <h3 className="font-outfit text-2xl font-bold mb-4">{service.title}</h3>
+            <h3 className="font-outfit text-xl sm:text-2xl font-bold mb-3 sm:mb-4">{service.title}</h3>
             <p className="text-zinc-400 text-sm leading-relaxed">
               {service.description}
             </p>
