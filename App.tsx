@@ -29,27 +29,27 @@ const App: React.FC = () => {
           <Hero />
         </section>
         
-        <section id="soluciones" className="relative z-10 py-24 md:py-32">
+        <section id="soluciones" className="relative z-10 py-16 sm:py-20 md:py-28">
           <Solutions />
         </section>
 
-        <section id="digitalizacion" className="relative z-10 py-24 md:py-32 bg-zinc-950">
+        <section id="digitalizacion" className="relative z-10 py-16 sm:py-20 md:py-28 bg-zinc-950">
           <LocalDigitalization />
         </section>
 
-        <section id="casos" className="relative z-30 py-24 md:py-32">
+        <section id="casos" className="relative z-30 py-16 sm:py-20 md:py-28">
           <CaseStudies />
         </section>
 
-        <section id="proceso" className="relative z-0 py-24 md:py-32 bg-zinc-950">
+        <section id="proceso" className="relative z-0 py-16 sm:py-20 md:py-28 bg-zinc-950">
           <Process />
         </section>
 
-        <section id="nosotros" className="relative z-10 py-24 md:py-32">
+        <section id="nosotros" className="relative z-10 py-16 sm:py-20 md:py-28">
           <About />
         </section>
 
-        <section id="contacto" className="relative z-10 py-24 md:py-32 bg-gradient-to-b from-black to-zinc-900">
+        <section id="contacto" className="relative z-10 py-16 sm:py-20 md:py-28 bg-gradient-to-b from-black to-zinc-900">
           <Contact />
         </section>
       </main>
