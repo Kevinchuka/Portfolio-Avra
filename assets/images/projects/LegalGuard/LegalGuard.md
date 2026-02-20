@@ -65,3 +65,6 @@ Esta herramienta es un asistente de auditoría y no sustituye el consejo legal p
 
 ---
 Desarrollado con ❤️ por **AvraIt**
+
+
+Link: https://legalguard.vercel.app/
