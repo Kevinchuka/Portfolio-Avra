@@ -1,39 +1,5 @@
 [
   {
-    "id": "aurora-logistics",
-    "title": "Aurora Logistics",
-    "category": "SaaS / Optimización",
-    "description": "Panel interno para gestionar inventario, tiempos y reportes operativos.",
-    "summary": "Un hub operativo con foco en métricas, reportes automáticos y seguimiento de flotas.",
-    "highlights": [
-      "Dashboard en tiempo real con KPIs de inventario.",
-      "Alertas automáticas para tiempos críticos.",
-      "Reportes descargables para equipos internos."
-    ],
-    "details": [
-      "El equipo necesitaba un panel operativo que redujera tiempos de respuesta y ordenara flujos de inventario.",
-      "Se diseñó una interfaz modular con reportes descargables y alertas configurables para operaciones críticas."
-    ],
-    "imageKey": "aurora"
-  },
-  {
-    "id": "vanguard-realty",
-    "title": "Vanguard Realty",
-    "category": "Real Estate / Web",
-    "description": "Sitio informativo con catálogo de propiedades y formularios de contacto.",
-    "summary": "Experiencia responsive con fichas de propiedades, filtros avanzados y contacto directo.",
-    "highlights": [
-      "Ficha de propiedad con galería multimedia.",
-      "Formularios segmentados por tipo de cliente.",
-      "Optimización SEO para búsquedas locales."
-    ],
-    "details": [
-      "El sitio fue pensado para destacar propiedades premium con una navegación clara y llamadas a la acción directas.",
-      "Se priorizó la performance en móvil para mejorar la captación de leads desde búsquedas locales."
-    ],
-    "imageKey": "vanguard"
-  },
-  {
     "id": "magia-encapsulada",
     "title": "Magia Encapsulada",
     "category": "E-commerce / Full Stack",
@@ -69,6 +35,99 @@
       "magiaCart",
       "magiaOrdersBuyer",
       "magiaOrdersAdmin"
+    ]
+  },
+  {
+    "id": "legalguard-ai",
+    "title": "LegalGuard AI",
+    "category": "LegalTech / IA",
+    "description": "Plataforma de auditoría legal inteligente con RAG, gestión documental y chat técnico sobre PDFs.",
+    "summary": "Solución para análisis legal asistido por IA con enfoque en privacidad y procesamiento local de documentos.",
+    "highlights": [
+      "Indexación de PDFs y consulta técnica contextual.",
+      "Motor RAG con Gemini AI para respuestas sobre documentos cargados.",
+      "Persistencia local con IndexedDB para proteger información sensible.",
+      "Interfaz profesional con monitoreo de actividad en tiempo real."
+    ],
+    "details": [
+      "LegalGuard AI está orientado a equipos legales que necesitan auditar contratos y documentación de forma rápida y segura.",
+      "La extracción e indexación de contenido sucede del lado del cliente para minimizar riesgos de exposición de datos.",
+      "Incluye una experiencia de chat técnico con contexto documental y una base sólida para escalar autenticación empresarial."
+    ],
+    "techStack": [
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Gemini AI",
+      "PDF.js",
+      "IndexedDB"
+    ],
+    "imageKey": "legalGuardHero",
+    "galleryKeys": [
+      "legalGuardLogin",
+      "legalGuardMain",
+      "legalGuardChat"
+    ]
+  },
+  {
+    "id": "gtg-landing",
+    "title": "GTG.ar Landing",
+    "category": "Finanzas / Landing Corporativa",
+    "description": "Landing institucional SEO-first para servicios financieros, desarrollada 100% a medida.",
+    "summary": "Sitio corporativo orientado a posicionamiento orgánico, cumplimiento comunicacional y captación de leads.",
+    "highlights": [
+      "Arquitectura component-driven sin plantillas.",
+      "Estrategia SEO-first desde el diseño de contenido.",
+      "Estructura alineada a comunicación institucional financiera.",
+      "Optimización de rendimiento y experiencia responsive."
+    ],
+    "details": [
+      "Proyecto diseñado y construido desde cero para una empresa del sector financiero con necesidades de presencia institucional sólida.",
+      "Cada sección fue modularizada para facilitar escalabilidad, mantenimiento y futuras integraciones de CMS.",
+      "Se priorizaron performance, claridad de mensajes y accesibilidad de información legal en la experiencia del usuario."
+    ],
+    "techStack": [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Anime.js"
+    ],
+    "demoUrl": "https://gtg.ar/",
+    "imageKey": "gtgHero",
+    "galleryKeys": [
+      "gtgLongCapture"
+    ]
+  },
+  {
+    "id": "whos-that-pokemon",
+    "title": "Who's that Pokémon?",
+    "category": "Game / Frontend",
+    "description": "Juego interactivo de adivinanza conectado a PokeAPI con modos claro y oscuro.",
+    "summary": "Aplicación web tipo trivia con lógica de rondas, validación flexible de respuestas y feedback inmediato.",
+    "highlights": [
+      "Consumo dinámico de PokeAPI con reintentos automáticos.",
+      "Normalización de nombres para respuestas más justas.",
+      "Estados de juego claros con feedback visual al instante.",
+      "Interfaz responsive con variantes visuales en claro/oscuro."
+    ],
+    "details": [
+      "El proyecto fue pensado para practicar integración con APIs, manejo de estado y experiencia de juego en frontend.",
+      "La lógica central se organiza en servicios y hooks para mantener componentes livianos y reutilizables.",
+      "Incluye diferentes capturas de la experiencia de usuario tanto en pantalla principal como en la vista de juego."
+    ],
+    "techStack": [
+      "React",
+      "TypeScript",
+      "Vite",
+      "Bootstrap",
+      "PokeAPI"
+    ],
+    "imageKey": "pokeApiHero",
+    "galleryKeys": [
+      "pokeApiMainDark",
+      "pokeApiGameDark",
+      "pokeApiMainLight",
+      "pokeApiGameLight"
     ]
   }
 ]

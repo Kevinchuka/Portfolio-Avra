@@ -9,10 +9,19 @@ import magiaShipping from '../assets/images/projects/ECommerce-MagiaEncapsulada/
 import magiaCart from '../assets/images/projects/ECommerce-MagiaEncapsulada/6-PurchaseOrderCart.png';
 import magiaOrdersBuyer from '../assets/images/projects/ECommerce-MagiaEncapsulada/7-OrderList-BuyerView.png';
 import magiaOrdersAdmin from '../assets/images/projects/ECommerce-MagiaEncapsulada/8-OrderList-Dashboard.png';
+import legalGuardHero from '../assets/images/projects/LegalGuard/principal-image.png';
+import legalGuardLogin from '../assets/images/projects/LegalGuard/Login.png';
+import legalGuardMain from '../assets/images/projects/LegalGuard/Main.png';
+import legalGuardChat from '../assets/images/projects/LegalGuard/Chat.png';
+import gtgHero from '../assets/images/projects/gtg - Landing Page/principal-image.png';
+import gtgLongCapture from '../assets/images/projects/gtg - Landing Page/Longcapture.png';
+import pokeApiHero from '../assets/images/projects/PokeApi- Whos that pokemon/Principal-Image.png';
+import pokeApiMainDark from '../assets/images/projects/PokeApi- Whos that pokemon/Main Modo Oscuro.png';
+import pokeApiGameDark from '../assets/images/projects/PokeApi- Whos that pokemon/Game Modo oscuro.png';
+import pokeApiMainLight from '../assets/images/projects/PokeApi- Whos that pokemon/Main Modo Claro.png';
+import pokeApiGameLight from '../assets/images/projects/PokeApi- Whos that pokemon/Game Modo Claro.png';
 
 const imageMap = {
-  aurora: 'https://picsum.photos/seed/aurora/800/600',
-  vanguard: 'https://picsum.photos/seed/vanguard/800/600',
   magiaHero,
   magiaHome,
   magiaProduct,
@@ -21,7 +30,18 @@ const imageMap = {
   magiaShipping,
   magiaCart,
   magiaOrdersBuyer,
-  magiaOrdersAdmin
+  magiaOrdersAdmin,
+  legalGuardHero,
+  legalGuardLogin,
+  legalGuardMain,
+  legalGuardChat,
+  gtgHero,
+  gtgLongCapture,
+  pokeApiHero,
+  pokeApiMainDark,
+  pokeApiGameDark,
+  pokeApiMainLight,
+  pokeApiGameLight
 };
 
 type ProjectData = {
