@@ -1,19 +1,24 @@
-
 import React, { useEffect, useState } from 'react';
 
 import { projects } from '../data/projects';
 
 export const CaseStudies: React.FC = () => {
   const [activeProjectIndex, setActiveProjectIndex] = useState<number | null>(null);
+  const [fullscreenImage, setFullscreenImage] = useState<{ src: string; alt: string } | null>(null);
   const activeProject = activeProjectIndex !== null ? projects[activeProjectIndex] : null;
 
   useEffect(() => {
-    if (!activeProject) {
+    if (!activeProject && !fullscreenImage) {
       return;
     }
 
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'Escape') {
+        if (fullscreenImage) {
+          setFullscreenImage(null);
+          return;
+        }
+
         setActiveProjectIndex(null);
       }
     };
@@ -23,7 +28,11 @@ export const CaseStudies: React.FC = () => {
     return () => {
       window.removeEventListener('keydown', handleKeyDown);
     };
-  }, [activeProject]);
+  }, [activeProject, fullscreenImage]);
+
+  const openFullscreenImage = (src: string, alt: string) => {
+    setFullscreenImage({ src, alt });
+  };
 
   return (
     <div className="max-w-7xl mx-auto px-6">
@@ -52,9 +61,9 @@ export const CaseStudies: React.FC = () => {
             }}
           >
             <div className="relative overflow-hidden rounded-3xl mb-6 aspect-[4/3] bg-zinc-900">
-              <img 
-                src={project.image} 
-                alt={project.title} 
+              <img
+                src={project.image}
+                alt={project.title}
                 className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 group-hover:rotate-1 opacity-70 group-hover:opacity-100"
                 loading="lazy"
                 decoding="async"
@@ -89,7 +98,11 @@ export const CaseStudies: React.FC = () => {
           >
             <div className="flex flex-col lg:flex-row gap-8 lg:gap-10 p-6 sm:p-8 lg:p-10 overflow-y-auto max-h-[85vh] sm:max-h-[75vh]">
               <div className="lg:w-1/2">
-                <div className="relative overflow-hidden rounded-2xl aspect-[4/3] bg-zinc-900">
+                <button
+                  type="button"
+                  className="relative w-full overflow-hidden rounded-2xl aspect-[4/3] bg-zinc-900 group"
+                  onClick={() => openFullscreenImage(activeProject.image, activeProject.title)}
+                >
                   <img
                     src={activeProject.image}
                     alt={activeProject.title}
@@ -97,11 +110,19 @@ export const CaseStudies: React.FC = () => {
                     loading="lazy"
                     decoding="async"
                   />
-                </div>
+                  <span className="absolute bottom-3 right-3 text-[10px] font-bold uppercase tracking-wider bg-black/60 text-white px-2 py-1 rounded-full border border-white/20">
+                    Pantalla completa
+                  </span>
+                </button>
                 {activeProject.gallery && (
                   <div className="grid grid-cols-2 gap-3 mt-6">
                     {activeProject.gallery.map((image, index) => (
-                      <div key={index} className="rounded-xl overflow-hidden border border-white/10 bg-zinc-900">
+                      <button
+                        key={index}
+                        type="button"
+                        className="rounded-xl overflow-hidden border border-white/10 bg-zinc-900 hover:border-orange-400/70 transition-colors"
+                        onClick={() => openFullscreenImage(image, `${activeProject.title} ${index + 1}`)}
+                      >
                         <img
                           src={image}
                           alt={`${activeProject.title} ${index + 1}`}
@@ -109,7 +130,7 @@ export const CaseStudies: React.FC = () => {
                           loading="lazy"
                           decoding="async"
                         />
-                      </div>
+                      </button>
                     ))}
                   </div>
                 )}
@@ -177,6 +198,32 @@ export const CaseStudies: React.FC = () => {
               <i className="bi bi-x-lg"></i>
             </button>
           </div>
+        </div>
+      )}
+
+      {fullscreenImage && (
+        <div
+          className="fixed inset-0 z-[10000] bg-black/95 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6"
+          onClick={() => setFullscreenImage(null)}
+          role="dialog"
+          aria-modal="true"
+          aria-label="Vista de imagen en pantalla completa"
+        >
+          <img
+            src={fullscreenImage.src}
+            alt={fullscreenImage.alt}
+            className="max-w-full max-h-full object-contain"
+            loading="lazy"
+            decoding="async"
+          />
+          <button
+            type="button"
+            className="absolute top-6 right-6 text-zinc-300 hover:text-white text-2xl"
+            onClick={() => setFullscreenImage(null)}
+            aria-label="Cerrar imagen completa"
+          >
+            <i className="bi bi-x-lg"></i>
+          </button>
         </div>
       )}
     </div>
