@@ -1,37 +1,97 @@
 [
   {
-    "id": "aurora-logistics",
-    "title": "Aurora Logistics",
-    "category": "SaaS / Optimización",
-    "description": "Panel interno para gestionar inventario, tiempos y reportes operativos.",
-    "summary": "Un hub operativo con foco en métricas, reportes automáticos y seguimiento de flotas.",
+    "id": "gtg-landing",
+    "title": "GTG.ar",
+    "category": "Corporate Landing / Full Stack",
+    "description": "Landing corporativa financiera enfocada en performance, SEO y compliance.",
+    "summary": "Sitio institucional creado desde cero para el sector financiero, con arquitectura escalable y estrategia SEO-first.",
     "highlights": [
-      "Dashboard en tiempo real con KPIs de inventario.",
-      "Alertas automáticas para tiempos críticos.",
-      "Reportes descargables para equipos internos."
+      "Landing 100% custom sin plantillas ni page builders.",
+      "Arquitectura de componentes con Next.js + Tailwind CSS.",
+      "Estructura semántica orientada a SEO y Core Web Vitals.",
+      "Diseño con enfoque en compliance y comunicación institucional."
     ],
     "details": [
-      "El equipo necesitaba un panel operativo que redujera tiempos de respuesta y ordenara flujos de inventario.",
-      "Se diseñó una interfaz modular con reportes descargables y alertas configurables para operaciones críticas."
+      "Proyecto diseñado para transmitir credibilidad institucional y facilitar la captación de leads dentro de un entorno regulado.",
+      "Se implementó una estrategia SEO desde el inicio con jerarquía semántica, performance optimizada y contenido orientado a posicionamiento orgánico.",
+      "Cada sección se desarrolló como componente independiente para facilitar mantenimiento y futuras integraciones con CMS."
     ],
-    "imageKey": "aurora"
+    "techStack": [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Anime.js"
+    ],
+    "demoUrl": "https://gtg.ar/",
+    "imageKey": "gtgHero",
+    "galleryKeys": [
+      "gtgFullCapture"
+    ]
   },
   {
-    "id": "vanguard-realty",
-    "title": "Vanguard Realty",
-    "category": "Real Estate / Web",
-    "description": "Sitio informativo con catálogo de propiedades y formularios de contacto.",
-    "summary": "Experiencia responsive con fichas de propiedades, filtros avanzados y contacto directo.",
+    "id": "legalguard-ai",
+    "title": "LegalGuard AI",
+    "category": "LegalTech / IA",
+    "description": "Asistente legal con IA para auditar documentos y generar respuestas con contexto controlado.",
+    "summary": "Plataforma LegalTech enfocada en análisis documental privado, recuperación contextual (RAG) y persistencia local segura.",
     "highlights": [
-      "Ficha de propiedad con galería multimedia.",
-      "Formularios segmentados por tipo de cliente.",
-      "Optimización SEO para búsquedas locales."
+      "Auditoría legal asistida por IA con contexto de documentos cargados.",
+      "Procesamiento local de PDFs en cliente para mayor confidencialidad.",
+      "Persistencia en IndexedDB de documentos y sesiones de chat.",
+      "Interfaz multilingüe con experiencia moderna tipo dark glassmorphism."
     ],
     "details": [
-      "El sitio fue pensado para destacar propiedades premium con una navegación clara y llamadas a la acción directas.",
-      "Se priorizó la performance en móvil para mejorar la captación de leads desde búsquedas locales."
+      "LegalGuard AI fue pensado para equipos legales que necesitan revisar documentación sensible sin exponer archivos completos a servicios externos.",
+      "La extracción de texto se realiza en el navegador y solo se envía a la IA el contexto necesario para responder cada consulta.",
+      "Incluye módulos de login, panel principal de auditoría y chat especializado para acelerar análisis y toma de decisiones."
     ],
-    "imageKey": "vanguard"
+    "techStack": [
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Google Gemini API",
+      "IndexedDB",
+      "pdf.js"
+    ],
+    "demoUrl": "https://legalguard.vercel.app/",
+    "imageKey": "legalGuardHero",
+    "galleryKeys": [
+      "legalGuardLogin",
+      "legalGuardMain",
+      "legalGuardChat"
+    ]
+  },
+  {
+    "id": "whos-that-pokemon",
+    "title": "¿Quién es ese Pokémon?",
+    "category": "Game / Frontend",
+    "description": "Juego web en React + TypeScript para adivinar Pokémon con integración a PokeAPI.",
+    "summary": "Aplicación interactiva con siluetas, validación de respuestas y estados de juego para practicar arquitectura frontend moderna.",
+    "highlights": [
+      "Integración con PokeAPI para obtener Pokémon aleatorios.",
+      "Custom hook para encapsular la lógica principal del juego.",
+      "Manejo explícito de estados: loading, error, acierto y fallo.",
+      "Feedback visual con alertas y animación de confetti."
+    ],
+    "details": [
+      "Proyecto enfocado en buenas prácticas de React moderno, separación de responsabilidades y tipado estricto con TypeScript.",
+      "La lógica de negocio se desacopla de la UI mediante servicios y hooks personalizados para escalar funcionalidades futuras.",
+      "Se implementó normalización robusta de strings para validar respuestas de usuario de forma consistente."
+    ],
+    "techStack": [
+      "React",
+      "TypeScript",
+      "Vite",
+      "Bootstrap",
+      "PokeAPI"
+    ],
+    "imageKey": "pokeHero",
+    "galleryKeys": [
+      "pokeMainLight",
+      "pokeMainDark",
+      "pokeGameLight",
+      "pokeGameDark"
+    ]
   },
   {
     "id": "magia-encapsulada",
